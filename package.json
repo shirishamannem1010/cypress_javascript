@@ -1,0 +1,20 @@
+{
+  "name": "demo_cypress_automation",
+  "version": "1.0.0",
+  "description": "cypress demo project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress_test": "node_modules\\.bin\\cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "devDependencies": {
+    "cypress": "^13.11.0",
+    "cypress-xpath": "^2.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
