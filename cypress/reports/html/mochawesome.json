@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-08T05:46:00.546Z",
+    "end": "2024-07-08T05:46:19.447Z",
+    "duration": 18901,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "12fa39a6-ad92-4ae2-83a8-34395c48a81c",
+      "title": "",
+      "fullFile": "cypress\\UI_testing\\e2e\\tests\\letcode_automation.cy.js",
+      "file": "cypress\\UI_testing\\e2e\\tests\\letcode_automation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b032c3a5-1fdd-45da-baea-78f994d38b21",
+          "title": "Different operations",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Inputfield Operations",
+              "fullTitle": "Different operations Inputfield Operations",
+              "timedOut": null,
+              "duration": 6431,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "inputfieldpage.navigateInputField();\ncy.url().should('eq', 'https://letcode.in/edit');\ninputfieldpage.inputOperations(data.inputfiled_data.fullName, data.inputfiled_data.append_text);\ncy.get('input#getMe').invoke('val').then(value => {\n  cy.log('Current value:', value);\n});\ncy.get('input#getMe').invoke('val').should('eq', 'ortonikc');\ninputfieldpage.inputTextOperations();\ncy.get('input#noEdit').should('be.disabled');\ncy.get('input#dontwrite').should('have.attr', 'readonly');",
+              "err": {},
+              "uuid": "18b939e0-ee1a-4d25-8e83-b1875c294c75",
+              "parentUUID": "b032c3a5-1fdd-45da-baea-78f994d38b21",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Buttons Operations",
+              "fullTitle": "Different operations Buttons Operations",
+              "timedOut": null,
+              "duration": 5877,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "buttons.navigateToButtons();\ncy.url().should('eq', 'https://letcode.in/buttons');\ncy.get('button#home').click();\ncy.go('back');\nbuttons.buttonsOperation();\nbuttons.checkButtonColor();\nbuttons.findHeightofButton();\ncy.get('#isDisabled.button.is-info').should('be.disabled');\nbuttons.click_holdButton();",
+              "err": {},
+              "uuid": "f87a3cd2-3498-4650-85d8-d3b7abd4b521",
+              "parentUUID": "b032c3a5-1fdd-45da-baea-78f994d38b21",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Drop Down Operations",
+              "fullTitle": "Different operations Drop Down Operations",
+              "timedOut": null,
+              "duration": 2878,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dropdown.navigateToDropDown();\ncy.url().should('eq', 'https://letcode.in/dropdowns');\ndropdown.selectOperations();\ndropdown.selectLastOption();\ndropdown.selectCountry();",
+              "err": {},
+              "uuid": "b3120b83-17b7-4e88-90b8-f01a830f4a3b",
+              "parentUUID": "b032c3a5-1fdd-45da-baea-78f994d38b21",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alert Functions",
+              "fullTitle": "Different operations Alert Functions",
+              "timedOut": null,
+              "duration": 3213,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "alerts.navigateToAlerts();\ncy.url().should('eq', 'https://letcode.in/alert');\nalerts.acceptAlerts();\nalerts.cancelTheAlert();",
+              "err": {},
+              "uuid": "227182d3-aff9-4363-95ab-6295a65cc8b3",
+              "parentUUID": "b032c3a5-1fdd-45da-baea-78f994d38b21",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "18b939e0-ee1a-4d25-8e83-b1875c294c75",
+            "f87a3cd2-3498-4650-85d8-d3b7abd4b521",
+            "b3120b83-17b7-4e88-90b8-f01a830f4a3b",
+            "227182d3-aff9-4363-95ab-6295a65cc8b3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 18399,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports/html",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
